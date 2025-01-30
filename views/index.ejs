@@ -9,34 +9,22 @@
   <body>
     <h1 class="title">Welcome to Express with EJS</h1>
     <script>
+      // Buttons
       const MainButton = window.Telegram.WebApp.MainButton;
       const BackButton = window.Telegram.WebApp.BackButton;
       const MainTitile = document.querySelector(".title");
-      const SettingButton = window.Telegram.WebApp.SettingsButton;
+      const SettingsButton = window.Telegram.WebApp.SettingsButton;
       MainButton.setText("Buyurtma berish");
-      console.log(MainButton);
       MainButton.show();
       MainButton.onClick(() => {
-        // MainButton.showProgress();
-        // MainButton.hide();
-        // MainButton.setParams({
-        //   text: "Buyurtma berildi",
-        //   is_active: false,
-        //   color: "#FF0000",
-        //   text_color: "#FFFFFF",
-        // });
-        BackButton.show();
         BackButton.onClick(() => {
-          MainTitile.textContent = "Buyurtma berildi";
-          BackButton.hide();
+          MainTitile.textContent = "Buyurtmalar";
         });
-        MainButton.setText("Buyurtma berildi");
-        MainButton.onClick(() => {
-          SettingButton.show();
-          SettingButton.onClick(() => {
-            MainTitile.textContent = "Settings";
-          });
-        });
+        BackButton.show();
+      });
+      SettingsButton.show();
+      SettingsButton.onClick(() => {
+        MainTitile.textContent = "Setting page";
       });
     </script>
   </body>

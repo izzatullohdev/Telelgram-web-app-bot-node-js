@@ -22,4 +22,4 @@ const startServer = () => {
   });
 };
 
-module.exports = startServer; // ❌ `app` emas, `startServer` ni eksport qilish kerak
+module.exports = startServer; 
